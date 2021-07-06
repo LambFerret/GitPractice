@@ -1,0 +1,46 @@
+
+--dry-run : 실제 실행없이 결과만
+
+깃 스타트!
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/LambFerret/UnityPractice1.git
+git push -u origin main
+
+or..
+git clone <git adress>
+
+
+로컬 브랜치 
+생성 : git branch <NAME>
+삭제 : git branch -d <NAME>
+리스트 : git branch -a
+
+변경 : git checkout
+원격으로 변경 : git chekcout -t
+
+깃 원격 브랜치
+업데이트 : git remote update , git fetch --all --prune
+삭제 : git push origin --delete  <NAME>
+
+깃 풀
+git fetch 
+git pull -> ( git fetch + git merge)
+
+
+오류 해결법들 
+1. branch -a 하면 나오는 빨간줄 지우기 
+	깃엔 레퍼런스 폴더가 있다. refs/
+	아니 왜 pull 하면 이상한걸 먹냐구
+	 git remote remove ver2
+
+2. git merge confilct 에서 vim으로 들어가졌을 경우 
+	:하고 메세지를 입력하고 엔터? 면 되는듯하다 
+
+3. ERROR : Please specify which branch you want to merge with.
+	origin main의 내용물을 로컬저장소main에 넣어주겠다는 지표 
+	git branch --set-upstream-to=origin/main main
+
+
